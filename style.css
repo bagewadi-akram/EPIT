@@ -182,7 +182,7 @@ nav:nth-child(2) {
     height: 700px;
     width: 1520px;
     margin-left: -1520px;
-    background-color: rgba(245, 245, 245, 0.411);
+    background-color: rgba(245, 245, 245, 0.973);
 }
 
 
@@ -320,26 +320,54 @@ nav:nth-child(2) {
     color: rgb(0, 0, 0);
 }
 
+.pro {
+    background-color: #020520;
+    overflow-x: hidden;
+}
+
 figure {
+    display: flex;
     position: sticky;
     top: 0;
-    display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
     height: 100vh;
-    $photos: 10;
-    @for $i from 1 through $photos {
-        &:nth-child(#{$i}) {
-            img {
-                $rotation: (($i - 1)/ ($photos - 1)) - 0.5;
-                transform: scale(0.6) rotate($rotation * 25deg);
-            }
-        }
-    }
-    img {
-        width: 100vmin;
-        height: 100vmin;
-        border-radius: 3px;
-    }
+}
+
+figure:nth-child(1) img {
+    transform: scale(0.6) rotate(-12.5deg)
+}
+
+figure:nth-child(2) img {
+    transform: scale(0.6) rotate(-9.72222deg)
+}
+
+figure:nth-child(3) img {
+    transform: scale(0.6) rotate(-6.94deg)
+}
+
+figure:nth-child(4) img {
+    transform: scale(0.6) rotate(-4.16deg)
+}
+
+figure:nth-child(5) img {
+    transform: scale(0.6) rotate(-1.38deg)
+}
+
+figure:nth-child(6) img {
+    transform: scale(0.6) rotate(-4.16deg)
+}
+
+figure:nth-child(7) img {
+    transform: scale(0.6) rotate(-6.94deg)
+}
+
+figure:nth-child(8) img {
+    transform: scale(0.6) rotate(-9.72deg)
+}
+
+figure img {
+    width: 100vmin;
+    height: 100vmin;
+    border-radius: 3px;
 }
