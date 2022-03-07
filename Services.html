@@ -1,15 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-
+    <title>EPIT-Services</title>
+    <style>
+        .boxs {
+            padding: -10px;
+            margin-left: -10px;
+            margin-top: -27px;
+            background-repeat: no-repeat;
+            background-size: 100% 500px;
+            height: 500px;
+            width: 100.9%;
+            margin-bottom: 25px;
+        }
+        
+        .fadee {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(128, 128, 128, 0.527);
+        }
+        
+        .imespn {
+            width: 60%;
+            height: 86%;
+            display: block;
+            float: left;
+            filter: drop-shadow(5px 5px 30px black);
+        }
+        
+        .imespn2 {
+            width: 60%;
+            height: 86%;
+            margin-left: -20px;
+            margin-right: 20px;
+            float: right;
+            filter: drop-shadow(-5px -5px 30px black);
+        }
+        
+        .textt {
+            font-size: 35px;
+            font-weight: bolder;
+            color: black;
+        }
+        /*box hover*/
+        
+        .hoo {
+            position: relative;
+            float: right;
+            margin-right: 40px;
+            margin-top: -100px;
+            padding: 30px;
+        }
+        
+        .hoo2 {
+            position: relative;
+            float: left;
+            margin-right: 40px;
+            margin-top: -45px;
+            padding: 30px;
+        }
+        
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 100%;
+            right: 0;
+            background-color: transparent;
+            overflow: hidden;
+            width: 0;
+            height: 0;
+            margin-left: -1555px;
+            margin-top: 50px;
+            transition: .5s ease-in-out;
+        }
+        
+        .hoo:hover .overlay {
+            width: 1700px;
+            height: 460px;
+            left: 0;
+            background-color: rgba(63, 62, 62, 0.836);
+        }
+        
+        .overlay2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: transparent;
+            overflow: hidden;
+            width: 0;
+            height: 0;
+            margin-left: -29px;
+            margin-top: 50px;
+            transition: .5s ease;
+        }
+        
+        .hoo2:hover .overlay2 {
+            width: 1600px;
+            height: 460px;
+            right: 0;
+            background-color: rgba(63, 62, 62, 0.836);
+        }
+        
+        .hootxt {
+            display: flex;
+            color: rgb(214, 211, 218);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+        }
+        
+        .fancy {
+            background-color: transparent;
+            border: 2px solid rgb(122, 122, 221);
+            border-radius: 0;
+            box-sizing: border-box;
+            color: rgb(124, 124, 177);
+            cursor: pointer;
+            display: inline-block;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-left: 30px;
+            outline: none;
+            overflow: visible;
+            padding: 0;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            text-transform: none;
+            transition: all 0.3s ease-in-out;
+            user-select: none;
+            font-size: 70px;
+            width: 96%;
+            height: 100px;
+        }
+        
+        .fancy::before {
+            content: " ";
+            width: 30.5625rem;
+            height: 6px;
+            background: rgb(55, 55, 102);
+            top: 54%;
+            left: 4.7em;
+            position: absolute;
+            transform: translateY(-50%);
+            transform-origin: center;
+            transition: background 0.3s linear, width 0.3s linear;
+        }
+        
+        .fancy .text {
+            font-size: 1.125em;
+            line-height: 1.33333em;
+            padding-left: 2em;
+            display: block;
+            text-align: right;
+            margin-right: 30px;
+            transition: all 0.3s ease-in-out;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: rgb(55, 55, 102);
+        }
+        
+        .fancy .top-key {
+            height: 2px;
+            width: 1.5625rem;
+            top: -2px;
+            left: 0.625rem;
+            position: absolute;
+            background: rgb(201, 195, 195);
+            transition: width 0.5s ease-out, left 0.3s ease-out;
+        }
+        
+        .fancy .bottom-key-1 {
+            height: 2px;
+            width: 1.5625rem;
+            right: 1.875rem;
+            bottom: -2px;
+            position: absolute;
+            background: rgb(201, 195, 195);
+            transition: width 0.5s ease-out, right 0.3s ease-out;
+        }
+        
+        .fancy .bottom-key-2 {
+            height: 2px;
+            width: 0.625rem;
+            right: 0.625rem;
+            bottom: -2px;
+            position: absolute;
+            background: rgb(201, 195, 195);
+            transition: width 0.5s ease-out, right 0.3s ease-out;
+        }
+        
+        .fancy:hover {
+            color: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.466);
+        }
+        
+        .fancy:hover::before {
+            width: 1.9375rem;
+            background: rgb(2, 2, 51);
+            transition: 1.5s ease-in-out;
+        }
+        
+        .fancy:hover .text {
+            color: rgb(2, 2, 51);
+            padding-right: 5.5em;
+            transition: 1.5s ease-in-out;
+        }
+        
+        .fancy:hover .top-key {
+            left: -2px;
+            width: 0px;
+        }
+        
+        .fancy:hover .bottom-key-1,
+        .fancy:hover .bottom-key-2 {
+            right: 0;
+            width: 0;
+        }
+        /*logo on top*/
+        
+        nav {
+            position: fixed;
+            padding: 5px;
+            width: 100%;
+            height: 60px;
+        }
+        /*logo styling*/
+        
+        .imga {
+            margin: 4px;
+            padding: 5px;
+            width: auto;
+            height: 90px;
+            position: absolute;
+            filter: brightness(0.4);
+            filter: saturate(12px);
+            filter: drop-shadow(1px 2px 10px rgba(0, 23, 99, 0.486));
+        }
+        /*logo hover*/
+        
+        .imga:hover {
+            position: absolute;
+            width: auto;
+            height: 120px;
+            filter: drop-shadow(2px 2px 20px rgba(1, 12, 61, 0.486));
+        }
+    </style>
 </head>
+
 <body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+    <nav>
+        <a href="Mainpage.html"><img class="imga" src="Img/logo/epit-removebg-preview.png"></a>
+    </nav>
+    <div class="boxs" style="background-image: url('img/service/embd.jpg');">
+        <div class="fadee">
+            <img src="img/service/embds.jpg" style="margin-top: 30px; margin-left: 30px; margin-right: 20px;" class="imespn">
+            <div class="textt" style="padding: 10px;">
+                <h1 style=" letter-spacing: 0.02em;">Embedded System Projects</h1>
+                <p style="font-size: 28px; "> - Stand alone embedded system<br> - Real-time embedded system<br> - Networked appliances<br> - Mobile devices</p>
+                <div class="hoo">
+                    <img style="margin-top: 40px;" src="img/symbol/swipe.png">
+                    <div class="overlay">
+                        <div class="hootxt">
+                            <div style="padding: 10px;">
+                                <img src="img/service/emdsystin.png" width="450px">
+                            </div>
+                            <div style=" margin-left: 100px;">
+                                <p style="font-weight: bolder; font-size: 55px; margin: -10px; margin-top: 30px; letter-spacing: 0.1em;">The Development Platform</p>
+                                <p style="text-align: left; font-size: 26px; font-weight: normal;">-The hardware platform<br> -The programming language<br> -The operating system<br> -The development tools</p>
+                                <p style="font-size: 25px; font-weight: normal; text-align: center; ">Embedded systems include Consumer electronics, automation,<br> Industrial automation,Automotive, Biomedical Systems,<br> Field Instrumentation, Telecommunications, Wireless technology,<br> Computer networking, Security,
+                                    and Finance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="boxs" style="background-image: url('img/service/autobg.jpg');">
+        <div class="fadee">
+            <img src="img/service/auto.jpg" style="margin-top: 30px; margin-left: 30px;" class="imespn2">
+            <div class="textt" style="padding: 6px;">
+                <h1 style="letter-spacing: 0.02em; font-size: 60px;">Industrial And<br>Home Automation</h1>
+                <p style="font-size: 26px; margin-top: -30px;">-Appliances.<br> -Doors.
+                    <br> -Garage.
+                    <br> -House Alarms.<br> -Lights. <br> -Watering Systems.
+                </p>
+
+                <div class="hoo2">
+                    <img src="img/symbol/swipe.png">
+                    <div class="overlay2">
+                        <div class="hootxt">
+                            <div>
+                                <img style="margin-top: 6px; margin-left: -90px;" src="img/service/autoin.png" width="550px" height="440px">
+                            </div>
+                            <div style=" margin-left: 100px;">
+                                <p style="font-weight: bolder; font-size: 60px; margin-left: -30px; margin-top: 30px; letter-spacing: 0.1em;">Benefits of Home Automation <br>Systems</p>
+                                <p style="text-align: left; font-size: 26px;">
+                                    -It can exceed human's working capacity.<br> -People get more spare time for other house activities.<br> -Flawless security mechanism.<br> -Quick and easy controls.<br> -Better environment for social gatherings.<br>                                    -Power saving.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="boxs" style="background-image: url('img/service/pdp2.webp');">
+        <div class="fadee">
+            <img src="img/service/pddfnt.jpg" style="margin-top: 30px; margin-left: 40px; margin-right: 20px;" class="imespn">
+            <div class="textt" style="padding: 2px;">
+                <h1 style="letter-spacing: 0.03em;">Product Design <br>& Development</h1>
+                <p style="font-size: 26px; margin-top: -30px;">-PCB ( Printed Circuit Boards)<br> -Electronic CAD<br> -EDA ( Electronic Design Automation)<br> -Electronic Product Design<br> -Network Design<br> -IC ( Integrated Circuits)<br> -VLSI ( Very Large Scale Integration)</p>
+                <div class="hoo">
+                    <img src="img/symbol/swipe.png">
+                    <div class="overlay">
+                        <div class="hootxt">
+                            <div style="padding: 4px; margin-left: 10px;">
+                                <img src="img/service/pdp4.png" width="450px">
+                            </div>
+                            <div style=" margin-left: 50px;">
+                                <p style=" font-size: 50px; margin: -20px; margin-top: 30px; letter-spacing: 0.1em;">Electronic Product Design and<br> Development for the 21st Century</p>
+                                <p style="text-align: left; font-size: 26px;">Electro Potent Info Tech specializes in the design and<br> development of high technology electronic products. Today’s<br> electronic product design and development requires the skillful<br> blend of expert hardware and
+                                    software engineering together<br> with a spirit of creativity and innovation, tempered by the practical <br>concerns of manufacturability, cost consciousness, testability<br> and on-time delivery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="boxs" style="background-image: url('img/service/sebk.png');">
+            <div class="fadee">
+                <img src="img/service/sec.jpg" style="margin-top: 30px; margin-right: -118px; margin-left: -10px;" class="imespn2">
+                <div class="textt" style="padding: 6px;">
+                    <h1 style="letter-spacing: 0.04em; margin-left: 60px; font-size: 80px;">Security</h1>
+                    <p style="font-size: 40px;margin-left: 20px;">-Data loss Prevention.<br> -Intrusion Detection System.<br> -Intrusion Prevention System.<br> -Firewall. -Antivirus</p>
+
+                    <div class="hoo2">
+                        <img style="margin-top: -70px;" src="img/symbol/swipe.png">
+                        <div class="overlay2">
+                            <div class="hootxt">
+                                <div>
+                                    <img style="margin-top: 6px; margin-left: -90px;" src="img/service/sec2.png" width="550px" height="440px">
+                                </div>
+                                <div style=" margin-left: 100px;">
+                                    <p style="font-weight: bolder; font-size: 60px; margin-left: -30px; margin-top: 30px; letter-spacing: 0.1em;">Benefits of Home Automation <br>Systems</p>
+                                    <p style="text-align: left; font-size: 26px;">
+                                        -It can exceed human's working capacity.<br> -People get more spare time for other house activities.<br> -Flawless security mechanism.<br> -Quick and easy controls.<br> -Better environment for social gatherings.<br>                                        -Power saving.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="fancy" href="Mainpage.html">
+            <span class="top-key"></span>
+            <span class="text">Back to Home</span>
+            <span class="bottom-key-1"></span>
+            <span class="bottom-key-2"></span>
+        </a>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
