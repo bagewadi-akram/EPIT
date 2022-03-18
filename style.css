@@ -1,3 +1,106 @@
+        .main {
+            background-color: rgba(0, 0, 0, 0.788);
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+        
+        .square {
+            position: relative;
+            height: 40px;
+            width: 250px;
+            font-weight: bolder;
+            font-size: 15px;
+            color: snow;
+            text-shadow: 2px 3px 10px rgba(255, 0, 0, 0.295), -2px -3px 10px rgba(255, 0, 0, 0.301);
+        }
+        
+        .square:nth-child(1) {
+            animation: mymove 8s infinite;
+            transform: rotate(15.98deg);
+        }
+        
+        .square:nth-child(2) {
+            animation: mymove 5s infinite;
+            transform: rotate(-21.98deg);
+        }
+        
+        .square:nth-child(3) {
+            animation: mymove 4s infinite;
+            transform: rotate(-8.98deg);
+        }
+        
+        .square:nth-child(4) {
+            animation: mymove 7s infinite;
+            transform: rotate();
+        }
+        
+        .square:nth-child(5) {
+            animation: mymove 6s infinite;
+            transform: rotate(-13.98deg);
+        }
+        
+        .square:nth-child(6) {
+            animation: mymove 9s infinite;
+            transform: rotate(3.98deg);
+        }
+        
+        .square:nth-child(7) {
+            animation: mymove 2s infinite;
+            transform: rotate(5.98deg);
+        }
+        
+        .square:nth-child(8) {
+            animation: mymove 9s infinite;
+            transform: rotate(10.98deg);
+        }
+        
+        .square:nth-child(9) {
+            animation: mymove 8s infinite;
+            transform: rotate(3.98deg);
+        }
+        
+        .square:nth-child(10) {
+            animation: mymove 3s infinite;
+            transform: rotate(-4.98deg);
+        }
+        
+        .square:nth-child(11) {
+            animation: mymove 2.3s infinite;
+            transform: rotate(-10.98deg);
+        }
+        
+        .square:nth-child(12) {
+            animation: mymove 7s infinite;
+            transform: rotate(10.98deg);
+        }
+        
+        .square:nth-child(13) {
+            animation: mymove 6s infinite;
+            transform: rotate(0.98deg);
+        }
+        
+        .square:nth-child(14) {
+            animation: mymove 5s infinite;
+            transform: rotate(40.98deg);
+        }
+        
+        .square:nth-child(15) {
+            animation: mymove 2s infinite;
+            transform: rotate(-40.98deg);
+        }
+        
+        @keyframes mymove {
+            from {
+                bottom: -150px;
+            }
+            to {
+                bottom: 900px;
+            }
+        }
         /*NAvigation bars */
         /*Logo bar*/
         
@@ -70,11 +173,6 @@
             height: 60vh;
             overflow: hidden;
         }
-        
-        .mainpagebox1:hover {
-            background-image: url(Img/all/main11.jpg);
-            background-size: cover;
-        }
         /*Content inside front name img etc */
         
         .front {
@@ -103,11 +201,6 @@
             box-sizing: border-box;
             width: 100%;
             height: 100vh;
-        }
-        
-        .mainpagebox2:hover {
-            background-image: url(Img/all/main16.jpg);
-            background-size: cover;
         }
         
         .mainpagebox2in {
