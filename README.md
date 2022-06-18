@@ -6,3 +6,6 @@ and All other are navigation bar links (such as about ,products, services etc )
 If you find any issue update me and other modifications also allowed but dont forget to create diff branch {Current one Master}
 Stay updated..
 
+created new website of this
+do visit and feedback
+www.elelctropotentinfotech.com
